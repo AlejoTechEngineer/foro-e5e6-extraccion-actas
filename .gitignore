@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+# Nunca versionar datos reales, actas ni transcripciones (Ley 1581 de 2012)
+data/reales/
+data/privado/
+actas/
+*.tif
+*.tiff
+# Entregables institucionales (plantilla con propiedad intelectual del Politécnico Grancolombiano)
+entregables/
+*.docx
+*.pdf
+

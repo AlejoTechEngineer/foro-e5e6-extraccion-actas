@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "extraccion-actas"
+version = "0.1.0"
+description = "Dimensionamiento y herramientas de evaluación para el estudio de caso de extracción automática de actas escaneadas (Foro E5-E6, Metodología de Casos)"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "statsmodels>=0.14", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+extraccion-actas = "extraccion_actas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
